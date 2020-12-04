@@ -3,8 +3,6 @@ import 'package:provider/provider.dart';
 import '../models/authentication.dart';
 
 class Login extends StatefulWidget {
-  static const routeName = '/login';
-
   @override
   _NoteState createState() => _NoteState();
 }
@@ -46,6 +44,7 @@ class _NoteState extends State<Login> {
         _authData['email'],
         _authData['password'],
       );
+      Navigator.pushNamed(context, '/home');
     } catch (e) {
       var errorMessage = "Authentication Failed. Please try agai later.";
       _showErrorDialog(errorMessage);
@@ -74,7 +73,7 @@ class _NoteState extends State<Login> {
                 ),
                 Icon(
                   Icons.person_add,
-                  color: Colors.blue,
+                  color: Colors.white,
                 )
               ],
             ),
@@ -89,12 +88,7 @@ class _NoteState extends State<Login> {
         children: [
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.yellow,
-                  Colors.blue,
-                ],
-              ),
+              color: Color(0xFF263238),
             ),
           ),
           Center(
@@ -103,12 +97,12 @@ class _NoteState extends State<Login> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Container(
-                height: 260,
+                height: 265,
                 width: 300,
                 padding: EdgeInsets.all(16),
                 child: Form(
                   key: _formKey,
-                  child: Column(
+                  child: ListView(
                     children: [
                       //Email
                       TextFormField(

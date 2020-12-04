@@ -4,11 +4,14 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Screen"),
-      ),
+      backgroundColor: Colors.teal[300],
       body: Center(
-        child: Text("Hello I am home"),
+        child: Text(
+          'Hello',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

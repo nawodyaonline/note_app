@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/Screens/home.dart';
 import 'package:provider/provider.dart';
 
-import 'package:note_app/Screens/home.dart';
+import 'package:note_app/Screens/app.dart';
 import 'package:note_app/Screens/login.dart';
 import 'package:note_app/Screens/sign_up.dart';
 import 'models/authentication.dart';
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        initialRoute: '/signin',
+        initialRoute: '/',
         routes: {
+          '/': (context) => App(),
           '/signup': (context) => Signup(),
           '/signin': (context) => Login(),
           '/home': (context) => Home(),

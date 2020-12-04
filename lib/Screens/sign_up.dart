@@ -43,6 +43,7 @@ class _NoteState extends State<Signup> {
     try {
       await Provider.of<Authentication>(context, listen: false)
           .signUp(_authData['email'], _authData['password']);
+      Navigator.pushNamed(context, '/signin');
     } catch (error) {
       var errorMessage = "Authentication Failed. Please try agai later.";
       _showErrorDialog(errorMessage);
@@ -66,12 +67,7 @@ class _NoteState extends State<Signup> {
         children: [
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.limeAccent,
-                  Colors.redAccent,
-                ],
-              ),
+              color: Color(0xFF263238),
             ),
           ),
           Center(
@@ -80,12 +76,13 @@ class _NoteState extends State<Signup> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Container(
-                height: 300,
+                height: 350,
                 width: 300,
                 padding: EdgeInsets.all(16),
                 child: Form(
                   key: _formKey,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       //Email
                       TextFormField(
@@ -140,7 +137,6 @@ class _NoteState extends State<Signup> {
                         child: Text("Sign up"),
                         onPressed: () {
                           _submit();
-                          Navigator.pushNamed(context, '/signin');
                         },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
