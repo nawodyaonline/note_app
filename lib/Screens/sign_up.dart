@@ -55,7 +55,7 @@ class _NoteState extends State<Signup> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.cyan[900],
+        backgroundColor: Color(0xFF1a237e),
         title: Text(
           "App Signup",
           style: TextStyle(
@@ -141,7 +141,7 @@ class _NoteState extends State<Signup> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        color: Colors.teal[400],
+                        color: Colors.blue[900],
                         textColor: Colors.white,
                       )
                     ],

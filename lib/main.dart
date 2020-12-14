@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/Screens/home.dart';
+import 'package:note_app/Screens/it_topics.dart';
+import 'package:note_app/Screens/pdf_viewer.dart';
 import 'package:provider/provider.dart';
 
 import 'package:note_app/Screens/app.dart';
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
           '/signup': (context) => Signup(),
           '/signin': (context) => Login(),
           '/home': (context) => Home(),
+          '/ict': (context) => ItList(),
+          '/pdf_viewer': (context) => PdfViewer(),
         },
       ),
     );

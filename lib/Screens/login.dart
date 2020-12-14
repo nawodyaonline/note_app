@@ -56,7 +56,7 @@ class _NoteState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.cyan[900],
+        backgroundColor: Color(0xFF1a237e),
         title: Text(
           "App Login",
           style: TextStyle(
@@ -98,7 +98,7 @@ class _NoteState extends State<Login> {
               ),
               child: Container(
                 height: 265,
-                width: 300,
+                width: 309,
                 padding: EdgeInsets.all(16),
                 child: Form(
                   key: _formKey,
@@ -144,7 +144,7 @@ class _NoteState extends State<Login> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        color: Colors.teal[400],
+                        color: Colors.blue[900],
                         textColor: Colors.white,
                       )
                     ],
