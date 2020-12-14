@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/Screens/pdf_viewer.dart';
 
 class TopicCard extends StatelessWidget {
   final String mainTopic;
-  final String subTopic;
+  final String pdfLink;
 
-  TopicCard({@required this.mainTopic, @required this.subTopic});
+  TopicCard({@required this.mainTopic, this.pdfLink});
 
   @override
   Widget build(BuildContext context) {
@@ -15,21 +16,28 @@ class TopicCard extends StatelessWidget {
       child: FlatButton(
         height: 50,
         onPressed: () {
-          Navigator.pushNamed(context, '/pdf_viewer');
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PdfViewer(
+                pdf: pdfLink,
+                topic: Text(mainTopic),
+              ),
+            ),
+          );
         },
         child: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(
-              width: 30,
-            ),
             Icon(
               Icons.book,
             ),
             SizedBox(
-              width: 40,
+              width: 15,
             ),
-            Text(mainTopic),
+            Text(
+              mainTopic,
+              style: TextStyle(fontSize: 13),
+            ),
           ],
         ),
       ),

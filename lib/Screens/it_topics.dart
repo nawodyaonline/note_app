@@ -10,44 +10,36 @@ class ItList extends StatelessWidget {
           scrollDirection: Axis.vertical,
           children: <Widget>[
             TopicCard(
-              mainTopic: '01 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.1 Basic Building Blocks of Information',
+              pdfLink: 'assets/ict_1_1.pdf',
             ),
             TopicCard(
-              mainTopic: '02 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.2 The need of manage data and information',
+              pdfLink: 'assets/ict_1_2.pdf',
             ),
             TopicCard(
-              mainTopic: '03 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.3 Abstract Model of Information ',
+              pdfLink: 'assets/ict_1_3.pdf',
             ),
             TopicCard(
-              mainTopic: '04 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.4 Basic Components of a Computer System ',
+              pdfLink: 'assets/ict_1_4.pdf',
             ),
             TopicCard(
-              mainTopic: '05 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.5 Data Processing Life Cycle',
+              pdfLink: 'assets/ict_1_5.pdf',
             ),
             TopicCard(
-              mainTopic: '06 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.6 Investigates the use of ICT',
+              pdfLink: 'assets/ict_1_6.pdf',
             ),
             TopicCard(
-              mainTopic: '07 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.7 Evaluates the Impact of ICT on the Society',
+              pdfLink: 'assets/ict_1_7.pdf',
             ),
             TopicCard(
-              mainTopic: '08 Main Topic',
-              subTopic: 'This is a test Run',
-            ),
-            TopicCard(
-              mainTopic: '09 Main Topic',
-              subTopic: 'This is a test Run',
-            ),
-            TopicCard(
-              mainTopic: '10 Main Topic',
-              subTopic: 'This is a test Run',
+              mainTopic: '1.5 Data Processing Life Cycle',
+              pdfLink: 'assets/ict_1_5.pdf',
             ),
           ],
         ),

@@ -2,13 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
 class PdfViewer extends StatefulWidget {
+  final String pdf;
+  final Text topic;
+
+  PdfViewer({@required this.pdf, @required this.topic});
+
   @override
-  _PdfViewerState createState() => _PdfViewerState();
+  _PdfViewerState createState() => _PdfViewerState(pdf, topic);
 }
 
 class _PdfViewerState extends State<PdfViewer> {
-  // String url = null;
-  String pdfasset = "assets/test.pdf";
+  // String url =
+  // 'https://github.com/nawodyaonline/note_app/blob/main/assets/test.pdf';
+  // String pdfasset = "assets/test.pdf";
+  String pdfasset;
+  final Text topic;
+  _PdfViewerState(this.pdfasset, this.topic);
 
   PDFDocument _doc;
   bool _loading;
@@ -24,6 +33,7 @@ class _PdfViewerState extends State<PdfViewer> {
       _loading = true;
     });
     final doc = await PDFDocument.fromAsset(pdfasset);
+    // final doc = await PDFDocument.fromURL(url);
     setState(() {
       _doc = doc;
       _loading = false;
@@ -32,9 +42,11 @@ class _PdfViewerState extends State<PdfViewer> {
 
   @override
   Widget build(BuildContext context) {
+    print(pdfasset);
     return Scaffold(
       appBar: AppBar(
-        title: Text("PDF Viwer 1"),
+        backgroundColor: Color(0xFF1a237e),
+        title: topic,
       ),
       body: _loading
           ? Center(
@@ -42,6 +54,7 @@ class _PdfViewerState extends State<PdfViewer> {
             )
           : PDFViewer(
               document: _doc,
+              indicatorBackground: Colors.blue[800],
             ),
     );
   }
